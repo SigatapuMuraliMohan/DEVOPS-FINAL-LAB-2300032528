@@ -23,18 +23,20 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
+      # Correct BACKEND build
       - name: Build and push backend image
         uses: docker/build-push-action@v5
         with:
           context: ./springbootproject
           file: ./springbootproject/backend.Dockerfile
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/2300032528-lab-frontend:latest
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/2300032528-lab-backend:latest
 
+      # Correct FRONTEND build
       - name: Build and push frontend image
         uses: docker/build-push-action@v5
         with:
           context: ./reactapp
           file: ./reactapp/frontend.Dockerfile
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/2300032528-lab-backend:latest
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/2300032528-lab-frontend:latest
