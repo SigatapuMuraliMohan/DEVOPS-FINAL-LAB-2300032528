@@ -2,8 +2,8 @@ import { useState, useEffect } from "react";
 import "./App.css";
 
 function App() {
-  // const BASE_URL = "http://localhost:2000/applicant";
-  const BASE_URL = import.meta.env.VITE_API_URL;
+  const BASE_URL = "http://localhost:30072/applicant";
+ 
 
 
   const [applicants, setApplicants] = useState([]);

@@ -113,9 +113,9 @@ spec:
           image: sigatapumuralimohan/2300032528-lab-frontend:latest  # <-- change this
           ports:
             - containerPort: 80
-          env:
-            - name: VITE_API_URL
-              value: "http://localhost:30072"  # Points to backend NodePort
+          # env:
+          #   - name: VITE_API_URL
+          #     value: "http://localhost:30072"  # Points to backend NodePort
 ---
 apiVersion: v1
 kind: Service
